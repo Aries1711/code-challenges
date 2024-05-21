@@ -17,3 +17,23 @@
 //     element[0] >= 55 && element[1] >= 7 ? "Senior" : "Open"
 //   );
 // }
+
+var a = "Hey fellow warriors";
+
+spinWords(a);
+
+function spinWords(a) {
+  return a
+    .split(" ")
+    .map(function (word) {
+      var wordSpinnning = "";
+      if (word.length > 4) {
+        for (var i = word.length - 1; i >= 0; i--) {
+          wordSpinnning += word[i]; // or newString = newString + str[i];
+        }
+        word = wordSpinnning;
+      }
+      return word;
+    })
+    .join(" ");
+}
